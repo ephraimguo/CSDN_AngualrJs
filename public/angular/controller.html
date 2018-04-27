@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="test">
+<head>
+    <meta charset="UTF-8">
+    <title>controller</title>
+    <script src="../javascripts/angular.js"></script>
+    <script>
+        var app = angular.module('test', []);
+        app.controller('ctr1', function($scope){
+          $scope.a='Guo Yanyu';
+        })
+    </script>
+</head>
+<body>
+<div ng-controller="ctr1">
+    <span>{{a}}</span>
+</div>
+</body>
+</html>

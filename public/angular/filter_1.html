@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="filter">
+<head>
+    <meta charset="UTF-8">
+    <title>filter 1</title>
+    <script src="../javascripts/angular.js"></script>
+    <script>
+        var app = angular.module('filter', []);
+        app.controller('ctr1', function($scope){
+          $scope.items = [
+            {name:'xxx', price:88, time: 1224799598768},
+            {name:'aaa', price:99, time: 1324799598768},
+            {name:'bbb', price:31.9, time: 1124799598768}
+          ];
+        });
+    </script>
+</head>
+<body>
+<ul ng-controller="ctr1">
+    <li ng-repeat="item in items">
+        <h3>Product Name: {{item.name}}</h3>
+        <p>Product Price: {{item.price | currency}}</p>
+        <i>Create time: {{item.time | date: "yyyy-MM-dd HH:mm:ss"}}</i>
+    </li>
+</ul>
+
+</body>
+</html>

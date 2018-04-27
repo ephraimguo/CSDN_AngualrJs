@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="test">
+<head>
+    <meta charset="UTF-8">
+    <title>ctr_2</title>
+    <script src="../javascripts/angular.js"></script>
+    <script>
+        var app = angular.module('test', []);
+        app.controller('ctr1', function($scope){
+          $scope.alert = function(){
+            window.alert("some thing");
+          }
+        });
+    </script>
+</head>
+<body>
+<div ng-controller="ctr1">
+    <input type="text" ng-model="str" />
+    <input type="button" value="button" ng-click="alert()">
+</div>
+
+</body>
+</html>
