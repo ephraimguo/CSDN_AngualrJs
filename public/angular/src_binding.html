@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="source-test">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../javascripts/angular.js"></script>
+    <script>
+        var app = angular.module('source-test', []);
+        app.controller('src-test', function($scope){
+
+        });
+    </script>
+</head>
+<body>
+<div ng-controller="src-test">
+    <input ng-model="src" type="text">
+    <img ng-src="{{src}}">
+    
+</div>
+</body>
+</html>

@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="test">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>controller</title>
     <script src="../javascripts/angular.js"></script>
     <script>
-        var app = angular.module('test', []);
+        var app = angular.module('ctrl-test', []);
         app.controller('ctr1', function($scope){
-          $scope.a='Guo Yanyu';
-        })
+          $scope.alter = function(str){
+            window.alert(str);
+          }
+        });
     </script>
 </head>
 <body>
-<div ng-controller="ctr1">
-    <span>{{a}}</span>
+<div ng-app="ctrl-test">
+    <div ng-controller="ctr1">
+        <input type="text" ng-model="str">
+        <input type="submit" value="Button" ng-click="alter(str)">
+    </div>
 </div>
+
 </body>
 </html>

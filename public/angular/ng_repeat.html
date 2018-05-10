@@ -6,8 +6,8 @@
     <script src="../javascripts/angular.js"></script>
 </head>
 <body >
-<ul ng-init=" user=[{name:'blue', age:18}, {name:'Three', age:24}, {name:'Guo', age:27}]">
-    <li ng-repeat="u in user">Name: {{u.name}}, Age:{{u.age}}</li>
+<ul ng-init="json={'a':'guo', 'b':'yan', 'c':'yu'}">
+   <li ng-repeat="(num,xum) in json">-{{num}} is {{xum}}</li>
 </ul>
 
 </body>

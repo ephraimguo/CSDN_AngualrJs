@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../javascripts/angular.js"></script>
+</head>
+<body ng-init="a=false">
+<input type="button" value="toggle" ng-click="a=!a">
+<div style="background:#ccc;height:300px;width: 300px;" ng-show="a"></div>
+<div style="background:#123;height:300px;width: 300px;" ng-hide="a"></div>
+<span>{{a}}</span>
+</body>
+</html>

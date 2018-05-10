@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ajax-test">
+<head>
+    <meta charset="UTF-8">
+    <title>Draw Data From Server</title>
+    <script src="../javascripts/angular.js"></script>
+    <script>
+        var app = angular.module('ajax-test', []);
+        app.controller('cont1', function($scope, $http){
+          $http({method: 'GET',
+            url:'/angular/angulartest',
+            params: {a:12, b:123}
+            }).success(function(res){
+            alert(res);
+          }).error(function(){
+            alert('Failed');
+          });
+        });
+    </script>
+</head>
+<body ng-controller="cont1">
+
+</body>
+</html>
